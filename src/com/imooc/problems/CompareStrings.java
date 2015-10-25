@@ -10,7 +10,7 @@ public class CompareStrings {
             return true;
 
         //ASCII 'A' = 65
-        
+
         //用数组存储A字符串中每个字母出现的次数
         int[] tableA = new int[26];
 
