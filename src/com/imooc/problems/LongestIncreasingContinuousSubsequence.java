@@ -45,5 +45,41 @@ public class LongestIncreasingContinuousSubsequence {
     }
 
 
+    /*
+    * 九章算法
+    *
+    * 对每一个结点进行访问时，看其前后结点的升降序情况，然后置位
+    * 如果该节点被置位，说明已经访问过，直接跳过
+    * public int longestConsecutive(int[] num) {
+        HashMap<Integer, Integer> hs = new HashMap<Integer, Integer>();
+        for(int i: num){
+            hs.put(i, 0);
+        }
+        int maxl = 1;
+        for(int i: num){
+            if (hs.get(i) == 1) continue;
+
+            int tmp = i;
+            int current_max = 1;
+            while(hs.containsKey(tmp+1)){
+                current_max ++;
+                tmp ++;
+                hs.put(tmp, 1);
+            }
+
+            tmp = i;
+            while(hs.containsKey(tmp-1)){
+                current_max ++;
+                tmp --;
+                hs.put(tmp, 1);
+            }
+
+            maxl = Math.max(current_max, maxl);
+        }
+
+        return maxl;
+    }
+    *
+    * */
 
 }
