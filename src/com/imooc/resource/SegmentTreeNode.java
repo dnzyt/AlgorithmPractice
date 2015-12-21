@@ -8,6 +8,7 @@ public class SegmentTreeNode {
     public int start;
     public int end;
     public int count;
+    public int max;
     public SegmentTreeNode left;
     public SegmentTreeNode right;
     public SegmentTreeNode(int start, int end) {
