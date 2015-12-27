@@ -26,6 +26,14 @@ public class SegmentTreeNode {
         this.right = null;
     }
 
+    public SegmentTreeNode(int start, int end, int count, int max) {
+        this.start = start;
+        this.end = end;
+        this.count = count;
+        this.left = null;
+        this.right = null;
+        this.max = max;
+    }
 
 
 }
